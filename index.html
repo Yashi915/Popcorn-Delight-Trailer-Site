@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- Formation of 1st page -->
+    <!-- 1st section of homepage -->
+    <div class="page1">
+        <div class="SignInPage">
+            <button id="btn" onclick="SignInPageOpen()">
+                Sign In
+            </button>
+        </div>
+        <!-- Weather Application -->
+        <div id="weather">
+            <header id="bar">
+                <input id="searchbox" class="searchbox searchbar" type="text" placeholder="Search for a city"
+                    oninput="Highlight()">
+                <img src="/search.png" onclick="WeatherInfo()" id="Search">
+            </header>
+            <main>
+                <section id="box1">
+                    <div class="place" id="place"></div>
+                    <div class="date" id="info"></div>
+                </section>
+                <section id="box2">
+                    <div class="temp1 " id="t1"></div>
+                    <div class="weather-name" id="txt"></div>
+                    <div class="temp2" id="t2"></div>
+                </section>
+            </main>
+        </div>
+        <!-- Sign -in form -->
+        <form id="form" action="action.php" autocomplete="on">
+            <legend>
+                <h1>Sign In</h1>
+            </legend>
+            <label for="Email">
+                <input type="text" placeholder="Email or Phone Number" id="Email" oninput="change()"
+                    onkeyup="MakeEnable()" class="input" required autocomplete="phone">
+            </label>
+            <label for="Password">
+                <input type="password" placeholder="Password" id="Password" oninput="change()" onkeyup="MakeEnable()"
+                    class="input" autocomplete="passwordex" maxlength="8">
+            </label>
+            <label>
+                <button id="Signin" disabled>
+                    Sign In
+                </button>
+            </label>
+            <p id="para">By continuing, you agree to Popcorn Delight's <span>Conditions of Use</span> and
+                <span>Privacy
+                    Notice</span>.
+            </p>
+            <input type="checkbox" id="104">
+            <label for="104" class="sliderBtn"></label>
+            <p class="txt-for-rememebering">Remember me</p>
+            <p id="help-section">Need Help?</p>
+            <img id="logo" src="/facebook.png">
+            <p id="facebook">Login with Facebook</p>
+            <img id="logo" src="/google.jpg">
+            <p id="google">Login with Google</p>
+            <p id="text">New to Popcorn Delight ? <span id="SignUpPageOpen" onclick="SignUpPageOpen()">Sign up
+                    Now</span></p>
+        </form>
+        <!-- Sign-Up form -->
+        <form id="form2" action="action.php">
+            <legend>
+                <h1>Sign Up to start your free month</h1>
+                <br>
+                <h3>Create your account</h3>
+            </legend>
+            <label for="Username">
+                <input type="text" placeholder="Username" id="Username" class="input2" autocomplete="username"
+                    oninput="changes()" onkeyup="MakeEnables()">
+            </label>
+            <label for="Phone">
+                <input type="text" placeholder="Email or Phone Number" id="Phone" class="input2" oninput="changes()"
+                    autocomplete="email" onkeyup="MakeEnables()">
+            </label>
+            <label for="Password2">
+                <input type="password" placeholder="Password" id="Password2" autocomplete="new-password" class="input2"
+                    oninput="changes()" onkeyup="MakeEnables()" maxlength="8">
+            </label>
+            <label for="ConfirmPassword">
+                <input type="password" placeholder="Confirm Password" id="ConfirmPassword" class="input2"
+                    autocomplete="current-password" oninput="changes()" maxlength="8" onkeyup="MakeEnables()">
+            </label>
+            <label>
+                <button id="SignUp" disabled>
+                    Sign Up
+                </button>
+            </label>
+        </form>
+        <!-- Movie Web Application Name -->
+        <h1>POPCORN DELIGHT</h1>
+        <p id="slogan">LETS GET POPPIN' ITS MOVIE NIGHT!</p>
+    </div>
+    <hr>
+    <!-- 2nd section of homepage -->
+    <div class="page2">
+        <div id="caption" data-aos="fade-right">Grab Popcorn; Grab Smartphone</div>
+        <div id="explaination">Settle in, dim the lights, and let the magic unfold, because your journey into the world
+            of cinema starts here.</div>
+        <img id="PopWithPhone-img" src="/popcorn-phone.webp">
+    </div>
+    <hr>
+    <!-- 3rd section of homepage -->
+    <div class="page3">
+        <div id="caption" data-aos="fade-left">Your Trailer Playlist, Offline-Ready</div>
+        <div id="explaination">Download shows and embrace the freedom of enjoying them offline.</div>
+        <img id="kalaChasma-gif" src="/badtameez-dil.gif">
+    </div>
+    <hr>
+    <!-- 4th section of homepage -->
+    <div class="page4">
+        <div id="caption" data-aos="fade-right">From Big Screens to Small, Trailers Anytime, Everywhere</div>
+        <div id="explaination">Your Favorite Trailers, Now Pocket-Sized for Your Smartphone, Unveil whenever you desire.
+        </div>
+        <img id="barbie-gif" src="/barbie-gif.webp">
+    </div>
+
+    <hr>
+    <!-- 5th section of homepage -->
+    <div class="page5">
+
+        <div id="caption" data-aos="fade-left">Unlock a World of Imagination</div>
+        <div id="explaination">Give your children a gateway to imagination with their very own trailer-watching
+            profiles.
+        </div>
+        <img id="Imagination-img" src="/dinosaur.jpg">
+    </div>
+    <hr>
+    <!-- 6th section of homepage  -->
+    <div class="page6" id="pageSix">
+        <h1>Frequently Asked Questions</h1>
+        <div id="ques1" class="ques" onclick="toggle1()">What is Popcorn Delight? <i class="fa-solid fa-plus"></i></div>
+        <div class="description" id="desc1"> Popcorn Delight is the ultimate trailer website that brings the magic of
+            the silver screen right to your fingertips.This website is designed to offer an engaging and user-friendly
+            experience, allowing visitors to preview trailers of upcoming films and TV series quickly and conveniently.
+        </div>
+        <div id="ques2" class="ques" onclick="toggle2()">Is this website free or subscription based?<i
+                class="fa-solid fa-plus"></i></div>
+        <div class="description" id="desc2">Rest assured, there are no costs involved in using this website. It's
+            designed to provide entertainment to all users without any subscription-based requirements.</div>
+        <div id="ques3" class="ques" onclick="toggle3()">How can I watch?<i class="fa-solid fa-plus"></i></div>
+        <div class="description" id="desc3">Begin by entering your registered email address and password in the sign-in
+            form. If you haven't created an account yet, there should be a "Sign Up" or "Create Account" option. Then
+            you'll be directed to your account dashboard .</div>
+        <div id="ques4" class="ques" onclick="toggle4()">How do I cancel?<i class="fa-solid fa-plus"></i></div>
+        <div class="description" id="desc4">Popcorn Delight is adaptable website. You can cancel it without any
+            contracts and agreements.You can just log out your website account and you will be no longer have access to
+            your account until you login again.</div>
+        <div id="ques5" class="ques" onclick="toggle5()">What can I watch on Popcorn Delight?<i
+                class="fa-solid fa-plus"></i></div>
+        <div class="description" id="desc5">You can watch a variety of trailers for movies and TV shows across different
+            genres, languages, and release years. </div>
+        <div id="ques6" class="ques" onclick="toggle6()">Is this website good for kids?<i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="description" id="desc6">Popcorn delight have taken great care to curate a collection of trailers
+            that are suitable for all ages, ensuring a safe and enjoyable experience for young viewers. You can explore
+            trailers for upcoming animated movies, heartwarming family stories, and exciting adventures that are perfect
+            for kids.</div>
+        <button id="startBtn">
+            <a href="">Get Started</a>
+        </button>
+        <hr>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 1000,
+        });
+    </script>
+    <script src="javascript.js"></script>
+</body>
+
+</html>

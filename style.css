@@ -1,0 +1,505 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+img {
+    height: 100vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form {
+    width: 26%;
+    height: 70vh;
+    background-color: black;
+    margin: auto;
+    color: white;
+    position: absolute;
+    font-family: sans-serif;
+    display: none;
+    padding: 10px;
+}
+
+#form2 {
+    width: 26%;
+    height: 67vh;
+    background-color: black;
+    margin: auto;
+    color: white;
+    font-family: sans-serif;
+    padding: 10px;
+    position: absolute;
+    display: none;
+
+}
+
+.input2,
+.input {
+    display: flex;
+    margin: 10px 10px 27px 10px;
+    width: 25em;
+    padding: 10px 10px;
+    background-color: rgb(46, 45, 45);
+    border: none;
+    color: white;
+}
+
+.input2 {
+    position: relative;
+    top: 20px;
+}
+
+#form2 legend {
+    margin-left: 15px;
+}
+
+#btn {
+    background-color: red;
+    width: 92%;
+    margin-left: 10px;
+    padding: 6px 6px;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#para {
+    position: relative;
+    left: 10px;
+    top: 25px;
+    color: gray;
+    cursor: default;
+}
+
+.txt-for-rememebering {
+    position: relative;
+    top: 40px;
+    left: 30px;
+    display: inline-block;
+    color: gray;
+}
+
+.sliderBtn {
+    height: 15px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: rgb(46, 45, 45);
+    position: relative;
+    top: 40px;
+    left: 12px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.sliderBtn::after {
+    content: "";
+    position: absolute;
+    top: 1.2px;
+    left: .9px;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+input[type="checkbox"]:checked+.sliderBtn::after {
+    translate: 13px 0px;
+}
+
+input[type="checkbox"]:checked+.sliderBtn {
+    background-color: red;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+#help-section {
+    position: relative;
+    display: inline;
+    top: 40px;
+    left: 120px;
+    color: gray;
+}
+
+#text {
+    color: gray;
+    position: relative;
+    top: 100px;
+    left: 10px;
+}
+
+#facebook {
+    display: inline;
+    position: relative;
+    top: 62px;
+    left: 45px;
+    color: gray;
+}
+
+#google {
+    display: inline;
+    position: relative;
+    top: 64px;
+    left: 45px;
+    color: gray;
+}
+
+#Signin,
+#SignUp {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(236, 71, 71);
+    width: 92%;
+    margin-left: 10px;
+    padding: 6px 6px;
+    border: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+
+#SignUp {
+    position: relative;
+    top: 29px;
+}
+
+#SignUpPageOpen {
+    color: white;
+    cursor: pointer;
+}
+
+#SignUpPageOpen:hover {
+    color: red;
+}
+
+span {
+    color: #2962ff;
+    cursor: default;
+}
+
+#logo {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    top: 80px;
+    left: 10px;
+    cursor: default;
+}
+
+.page1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgb(9, 11, 23);
+    font-family: 'Times New Roman', Times, serif;
+    height: 100vh;
+    width: 100%;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-delay: 18.5s;
+    transition-timing-function: linear;
+}
+
+.page1 h1 {
+    font-size: 60px;
+    word-spacing: 10px;
+    margin-left: 10px;
+    cursor: default;
+}
+
+h3 {
+    cursor: default;
+}
+
+.page1 #form2 h1 {
+    font-size: 38px;
+}
+
+.page1 #slogan,
+#explaination {
+    font-size: 25px;
+    word-spacing: 7px;
+    color: white;
+}
+
+.page1 #weather {
+    height: 50vh;
+    width: 22%;
+    background-image: url('Untitled design.png');
+    background-size: cover;
+    background-position: top center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    position: relative;
+    bottom: 70px;
+    text-align: center;
+    font-family: "outfit", sans-serif;
+}
+
+.page1 .temp1 {
+    font-size: 70px;
+    font-weight: bolder;
+    text-shadow: 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.page1 .searchbox {
+    position: relative;
+    bottom: 54px;
+    background-color: rgba(18, 18, 18, 0.6);
+    border-radius: 14px;
+    border: none;
+    border-bottom: 2px solid #df8e00;
+    width: 21em;
+    height: 29px;
+    padding: 10px;
+    color: white;
+}
+
+.page1 .searchbox:hover {
+    border: 2.5px solid white;
+    width: 20.5em;
+}
+
+.page1 img {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    bottom: 78px;
+    left: 242px;
+    cursor: pointer;
+}
+
+.page1 #box1 {
+    position: relative;
+    bottom: 21px;
+}
+
+main {
+    cursor: default;
+}
+
+.weather-name,
+.temp2 {
+    position: relative;
+    top: 20px;
+
+}
+
+.place,
+.weather-name {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.page1 .weather-name {
+    font-style: italic;
+    text-shadow: 0px 2px rgba(0, 0, 0, 0.4);
+}
+
+.date,
+.temp2 {
+    font-size: 20px;
+}
+
+hr {
+    height: 8px;
+    background-color: #393d3f;
+    border: none;
+}
+
+.page2,
+.page3,
+.page4,
+.page5 {
+    height: 70vh;
+    width: 100%;
+    background-color: rgb(9, 11, 23);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#caption {
+    font-size: 60px;
+    color: white;
+    width: 800px;
+    height: 180px;
+    position: relative;
+    top: 160px;
+    left: 80px;
+}
+
+#explaination {
+    height: 400px;
+    width: 700px;
+    left: 130px;
+    text-align: center;
+    position: relative;
+    top: 70px;
+    font-weight: 100px;
+}
+
+.page3 #caption {
+    position: relative;
+    left: 550px;
+    width: 870px;
+}
+
+.page5 #caption {
+    position: relative;
+    left: 650px;
+}
+
+.page5 #explaination {
+    position: relative;
+    left: 700px;
+}
+
+.page3 #explaination {
+    position: relative;
+    /* top: 60px; */
+    left: 680px;
+    width: 600px;
+}
+
+.page4 #explaination {
+    position: relative;
+    top: 140px;
+    left: 100px;
+}
+
+.page1 .SignInPage button {
+    background-color: red;
+    position: relative;
+    bottom: 80px;
+    left: 640px;
+    width: 100px;
+    border: none;
+}
+
+.page6 {
+    background-color: rgb(9, 11, 23);
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    height: 1000px;
+    padding-top: 60px;
+    color: white;
+    margin: auto;
+}
+
+.page6 h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+#Imagination-img,
+#kalaChasma-gif {
+    width: 350px;
+    height: 350px;
+    position: relative;
+    left: 160px;
+    bottom: 500px;
+    border-radius: 30px;
+    box-shadow: -10px 10px 5px rgba(168, 188, 218, 0.246);
+}
+
+#PopWithPhone-img,
+#barbie-gif {
+    width: 350px;
+    height: 350px;
+    position: relative;
+    left: 950px;
+    bottom: 520px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 5px rgba(168, 188, 218, 0.246);
+}
+
+.ques,
+.description {
+    background-color: #393d3f;
+    border: none;
+    height: 80px;
+    width: 1000px;
+    position: relative;
+    left: 200px;
+    font-size: 27px;
+    color: white;
+    padding: 20px;
+    cursor: default;
+}
+
+.ques:hover {
+    background-color: #595959;
+}
+
+.ques {
+    margin: 10px 0px 0px 10px;
+}
+
+#ques1 {
+    margin-top: 60px;
+}
+
+i {
+    position: absolute;
+    right: 30px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.description {
+    margin: 2px 0px 10px 10px;
+}
+
+#desc1,
+#desc6 {
+    height: 170px;
+    display: none;
+}
+
+#desc2,
+#desc5 {
+    height: 100px;
+    display: none;
+}
+
+#desc3,
+#desc4 {
+    height: 130px;
+    display: none;
+}
+
+#startBtn {
+    height: 60px;
+    width: 150px;
+    background-color: red;
+    border: none;
+    position: relative;
+    left: 600px;
+    top: 100px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+.page6 hr {
+    position: relative;
+    top: 200px;
+}
