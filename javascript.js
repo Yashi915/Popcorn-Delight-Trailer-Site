@@ -11,8 +11,8 @@ function WeatherInfo() {
     document.getElementById('weather').style.color = "black";
     let t2 = document.getElementById('t2');
     let t1 = document.getElementById('t1');
-    let a = 0;
-    let b = 50;
+    let a = 26;
+    let b = 30;
     t2.innerHTML = result1(a, b);
     t1.innerHTML = result2(a, b);
     function result1(a, b) {
@@ -154,6 +154,10 @@ function MakeEnables() {
       SignUp.disabled = true;
     }
   }
+}
+
+function Start(){
+  alert("Please Sign In or if you have already an account on Popcorn Delight then Sign Up.")
 }
 
 function toggle1() {
